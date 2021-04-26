@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ActivityRecyclerViewFragment</string>
+    <string name="skip">Skip</string>
+    <string name="start_to_invest">Start to invest</string>
+    <string name="for_your_future">for your future!</string>
+    <string name="ex_totam_praesentium_incidunt_aut">Ex totam praesentium incidunt aut.</string>
+    <string name="next">NEXT</string>
+    <string name="todo">TODO</string>
+    <string name="to_achieve_success">to achieve success!</string>
+    <string name="follow_our_tips">Follow our tips</string>
 </resources>

@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ActivityRecyclerViewFragment">
+        <activity android:name=".OnBoarding2Activity"></activity>
         <activity android:name=".OnBoarding1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

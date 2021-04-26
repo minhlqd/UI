@@ -8,31 +8,40 @@
     tools:context=".OnBoarding1Activity">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33.9dp"
-        android:layout_marginTop="240.3dp"
-        android:layout_marginBottom="444.7dp"
-        android:src="@drawable/ic_componente_5_1"
+        android:scaleType="center"
+        android:src="@drawable/ic_componente_4_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41"
-        android:contentDescription="@string/todo" />
-
+        />
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/todo"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_vector_bg"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="51.8dp"
+        android:layout_marginBottom="135.3dp"
+        android:src="@drawable/ic_gruppo_di_maschere_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/ic_back_round"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="742dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
@@ -59,13 +68,14 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="590dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="131.1dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="628.1dp"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,7 +87,7 @@
             android:fontFamily="@font/raleway_black"
             android:textSize="28sp"
             android:textColor="#3e3e3e"
-            android:text="@string/start_to_invest"/>
+            android:text="@string/follow_our_tips"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +95,7 @@
             android:fontFamily="@font/raleway_black"
             android:textSize="28sp"
             android:textColor="#3e3e3e"
-            android:text="@string/for_your_future"/>
+            android:text="@string/to_achieve_success"/>
         <TextView
             android:layout_marginTop="7.9dp"
             android:fontFamily="@font/lato_light"
@@ -125,22 +135,19 @@
         android:layout_marginBottom="66dp"
         android:layout_marginStart="39dp"
         android:layout_marginEnd="262dp">
-
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/btn_2_onboarding_background"/>
         <TextView
             android:layout_width="38dp"
             android:layout_height="9dp"
+            android:layout_marginStart="6dp"
             android:background="@drawable/btn_1_onboarding_background" />
         <TextView
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginStart="6dp"
             android:background="@drawable/btn_2_onboarding_background"/>
-        <TextView
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginStart="6dp"
-            android:background="@drawable/btn_2_onboarding_background"/>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
