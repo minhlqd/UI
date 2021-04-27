@@ -82,7 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
     <LinearLayout
         android:id="@+id/linear"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:layout_marginStart="63dp"
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="249dp"
+                android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:background="@drawable/edit_text_background"
                 style="@style/Skip"
@@ -110,7 +110,7 @@
             android:layout_height="match_parent"
             app:passwordToggleEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="249dp"
+                android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:background="@drawable/edit_text_background"
                 style="@style/Skip"
@@ -121,7 +121,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:layout_width="249dp"
+            android:layout_width="match_parent"
             android:layout_height="51dp"
             android:layout_marginTop="14.5dp"
             android:fontFamily="@font/lato_black"
@@ -133,6 +133,7 @@
         <LinearLayout
             android:layout_marginTop="15dp"
             android:orientation="horizontal"
+            android:layout_gravity="end"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
@@ -142,7 +143,9 @@
                 android:text="@string/forgot_password"/>
 
             <TextView
-                android:layout_marginStart="72dp"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="15dp"
+                android:gravity="end"
                 android:fontFamily="@font/lato_bold"
                 style="@style/Skip"
                 android:textColor="#9d9d9d"
