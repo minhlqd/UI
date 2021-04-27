@@ -28,4 +28,9 @@
     <string name="tradix">TRADIX</string>
     <string name="the_future_of_trading">The future of trading</string>
     <string name="create_a_free_account">Create a free account</string>
+    <string name="we_have_sent_you_an">We have sent you an</string>
+    <string name="email_to_change_your">email to change your</string>
+    <string name="passwords">password</string>
+    <string name="resend_email">Resend Email</string>
+    <string name="wait_30_seconds_before_sending_it">Wait 30 seconds before sending it</string>
 </resources>
