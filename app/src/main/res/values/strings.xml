@@ -22,9 +22,10 @@
     <string name="login_failed">"Login failed"</string>
     <string name="e_mail">E-mail</string>
     <string name="password">Password</string>
-    <string name="login">LOGIN</string>
+    <string name="login">login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="sign_up">Sign Up</string>
     <string name="tradix">TRADIX</string>
     <string name="the_future_of_trading">The future of trading</string>
+    <string name="create_a_free_account">Create a free account</string>
 </resources>
