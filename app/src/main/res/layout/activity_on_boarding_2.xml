@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="center"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_componente_4_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
         android:textSize="14sp"
         android:textColor="#ffffff"
         android:text="@string/next"
-        android:background="@drawable/btn_onboarding_background"
+        android:background="@drawable/btn_background"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
