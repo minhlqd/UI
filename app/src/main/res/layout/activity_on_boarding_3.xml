@@ -8,27 +8,6 @@
     tools:context=".OnBoarding1Activity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        android:src="@drawable/ic_componente_4_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/todo"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="51.8dp"
-        android:layout_marginBottom="135.3dp"
-        android:src="@drawable/ic_gruppo_di_maschere_3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear" />
-    <ImageView
         android:id="@+id/back"
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -41,6 +20,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="56dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_gruppo_di_maschere_4"
+        app:layout_constraintBottom_toTopOf="@id/linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
@@ -67,10 +61,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="93dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="628.1dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="162.1dp"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,25 +72,25 @@
 
         <TextView
             style="@style/TextOnBoarding"
-            android:text="@string/follow_our_tips"/>
+            android:text="@string/keep_your"/>
 
         <TextView
             style="@style/TextOnBoarding"
-            android:text="@string/to_achieve_success"/>
+            android:text="@string/investment_safe"/>
         <TextView
             android:layout_marginTop="7.9dp"
-            android:fontFamily="@font/lato_light"
             style="@style/Skip"
-            android:text="@string/ex_totam_praesentium_incidunt_aut" />
+            android:fontFamily="@font/lato_light"
+            android:text="@string/ex_totam_praesentium_incidunt_aut"/>
     </LinearLayout>
     <Button
-        android:id="@+id/next"
+        android:id="@+id/start"
         android:layout_width="100dp"
         android:layout_height="44dp"
         android:fontFamily="@font/lato_black"
         android:textSize="14sp"
         android:textColor="#ffffff"
-        android:text="@string/next"
+        android:text="@string/start"
         android:background="@drawable/btn_onboarding_background"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent"
@@ -108,8 +102,8 @@
         android:layout_marginEnd="51dp"/>
 
     <LinearLayout
-        android:layout_width="66dp"
-        android:layout_height="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent"
@@ -119,19 +113,22 @@
         android:layout_marginBottom="66dp"
         android:layout_marginStart="39dp"
         android:layout_marginEnd="262dp">
+
         <TextView
             android:layout_width="8dp"
             android:layout_height="8dp"
+            android:background="@drawable/btn_2_onboarding_background"/>
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="6dp"
             android:background="@drawable/btn_2_onboarding_background"/>
         <TextView
             android:layout_width="38dp"
             android:layout_height="9dp"
             android:layout_marginStart="6dp"
             android:background="@drawable/btn_1_onboarding_background" />
-        <TextView
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginStart="6dp"
-            android:background="@drawable/btn_2_onboarding_background"/>
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

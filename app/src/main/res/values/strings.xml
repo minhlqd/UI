@@ -8,4 +8,16 @@
     <string name="todo">TODO</string>
     <string name="to_achieve_success">to achieve success!</string>
     <string name="follow_our_tips">Follow our tips</string>
+    <string name="keep_your">Keep your</string>
+    <string name="investment_safe">investment safe</string>
+    <string name="start">START</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>

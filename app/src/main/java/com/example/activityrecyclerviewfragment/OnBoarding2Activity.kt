@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_on_boarding_2.*
+import kotlinx.android.synthetic.main.activity_on_boarding_2.back
+import kotlinx.android.synthetic.main.activity_on_boarding_2.skip
+import kotlinx.android.synthetic.main.activity_on_boarding_3.*
 
 class OnBoarding2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +15,7 @@ class OnBoarding2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_on_boarding_2)
 
         next.setOnClickListener {
-            val intent = Intent(this, OnBoarding2Activity::class.java)
+            val intent = Intent(this, OnBoarding3Activity::class.java)
             startActivity(intent)
         }
 
@@ -22,7 +25,8 @@ class OnBoarding2Activity : AppCompatActivity() {
         }
 
         skip.setOnClickListener {
-            Toast.makeText(this, "aaa", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
     }
