@@ -29,6 +29,12 @@ class IndexAdapter(var indexList: MutableList<Index>) : RecyclerView.Adapter<Ind
         }
     }
 
+    fun deleteItem(pos : Int)
+    {
+        indexList.removeAt(pos)
+        notifyItemRemoved(pos)
+    }
+
     override fun onBindViewHolder(holder: IndexViewHolder, position: Int) {
         holder.bindData(indexList?.get(position))
     }

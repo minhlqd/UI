@@ -2,14 +2,17 @@ package com.example.activityrecyclerview.fragments
 
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.adaters.IndexAdapter
+import com.example.activityrecyclerview.adaters.SwipeToDelete
 import com.example.activityrecyclerview.data.Index
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_on_boarding2.*
@@ -26,7 +29,7 @@ class HomeFragment : Fragment() {
     private val index3: Index = Index("DOWN JONE", "NYSE")
     private val index4: Index = Index("IBEX35", "LONDON")
 
-    var data: Int = 1
+    var data: Int = 2
     var isLoading : Boolean = false
     val limit : Int = 10
 
@@ -52,16 +55,20 @@ class HomeFragment : Fragment() {
         recycleView.adapter = indexAdapter
         getData()
 
+        var itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
+        itemTouchHelper.attachToRecyclerView(recycleView)
+
         recycleView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 if (dy>0) {
                     val visibleItemCount = layoutManager.childCount
                     val pastVisibleItem = layoutManager.findFirstCompletelyVisibleItemPosition()
                     val total = indexAdapter.itemCount
-
                     if (!isLoading) {
-                        data++
-                        getData()
+                        if ((visibleItemCount + pastVisibleItem) >= total) {
+                            data++
+                            getData()
+                        }
                     }
                 }
                 super.onScrolled(recyclerView, dx, dy)
@@ -71,16 +78,20 @@ class HomeFragment : Fragment() {
 
     private fun getData() {
         isLoading = true
+        Log.d("aaa", isLoading.toString())
         loadMore.visibility = View.VISIBLE
-        val start: Int = data * limit
+        val start: Int = (data - 1) * limit
         val end: Int = data * limit
         for (i in start..end) {
-            when (i) {
-                in 1..5 -> index.add(index3)
-                in 6..10 -> index.add(index4)
+            when (i%4) {
+                0 -> index.add(index1)
+                1 -> index.add(index2)
+                2 -> index.add(index3)
+                3 -> index.add(index4)
             }
         }
         Handler().postDelayed({
+            Log.d("aaa", isLoading.toString())
             if (::indexAdapter.isInitialized){
                 indexAdapter.notifyDataSetChanged()
             } else {
@@ -90,7 +101,6 @@ class HomeFragment : Fragment() {
             isLoading = false
             loadMore.visibility = View.GONE
         }, 1000)
-
     }
 
 }
