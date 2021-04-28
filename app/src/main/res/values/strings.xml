@@ -37,4 +37,6 @@
     <string name="changed">changed!</string>
     <string name="you_can_now_log_into_your_account">You can now log into your account</string>
     <string name="with_the_new_password">with the new password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

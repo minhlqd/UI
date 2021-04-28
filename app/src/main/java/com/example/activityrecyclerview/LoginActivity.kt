@@ -1,10 +1,9 @@
-package com.example.activityrecyclerviewfragment
+package com.example.activityrecyclerview
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.Log.WARN
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

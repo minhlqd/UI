@@ -1,10 +1,9 @@
-package com.example.activityrecyclerviewfragment
+package com.example.activityrecyclerview
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_confirm_change_password.*
-import kotlinx.android.synthetic.main.activity_email.*
 
 class ConfirmChangePasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

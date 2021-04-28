@@ -1,4 +1,4 @@
-package com.example.activityrecyclerviewfragment
+package com.example.activityrecyclerview
 
 import android.annotation.SuppressLint
 import android.content.Intent
