@@ -33,4 +33,8 @@
     <string name="passwords">password</string>
     <string name="resend_email">Resend Email</string>
     <string name="wait_30_seconds_before_sending_it">Wait 30 seconds before sending it</string>
+    <string name="yay_your_password_has_been">Yay! Your password has been</string>
+    <string name="changed">changed!</string>
+    <string name="you_can_now_log_into_your_account">You can now log into your account</string>
+    <string name="with_the_new_password">with the new password</string>
 </resources>
