@@ -39,4 +39,11 @@
     <string name="with_the_new_password">with the new password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="down_jone">DOWN JONE</string>
+    <string name="nyse">NYSE</string>
+    <string name="_10_44_45">10:44:45</string>
+    <string name="index">Index</string>
+    <string name="_20_047_50">20.047,50</string>
+    <string name="_203_1_04">+203 (+1,04%)</string>
+    <string name="load_more">Load More</string>
 </resources>

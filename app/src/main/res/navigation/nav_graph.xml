@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.example.activityrecyclerview.OnBoarding1Fragment"
+        android:name="com.example.activityrecyclerview.fragments.OnBoarding1Fragment"
         android:label="OnBoardingFragment" >
         <action
             android:id="@+id/action_onBoardingFragment_to_onBoarding2Fragment"
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoarding2Fragment"
-        android:name="com.example.activityrecyclerview.OnBoarding2Fragment"
+        android:name="com.example.activityrecyclerview.fragments.OnBoarding2Fragment"
         android:label="OnBoarding2Fragment" >
         <action
             android:id="@+id/tutorial_skip"
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoarding3Fragment"
-        android:name="com.example.activityrecyclerview.OnBoarding3Fragment"
+        android:name="com.example.activityrecyclerview.fragments.OnBoarding3Fragment"
         android:label="OnBoarding3Fragment" >
         <action
             android:id="@+id/action_onBoarding3Fragment_to_onBoardingFragment"
@@ -46,7 +46,7 @@
     </fragment>
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.example.activityrecyclerview.LoginActivity"
+        android:name="com.example.activityrecyclerview.uis.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
 </navigation>

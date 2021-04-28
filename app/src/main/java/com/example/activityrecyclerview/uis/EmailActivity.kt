@@ -1,4 +1,4 @@
-package com.example.activityrecyclerview
+package com.example.activityrecyclerview.uis
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
+import com.example.activityrecyclerview.R
 import kotlinx.android.synthetic.main.activity_email.*
 
 class EmailActivity : AppCompatActivity() {

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#676767"
+        android:fontFamily="@font/raleway_black"
+        android:text="@string/down_jone"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="4dp"/>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_below="@id/name"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="#4d4d4d"
+            android:text="@string/nyse"/>
+        <TextView
+            android:id="@+id/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="#4d4d4d"
+            android:text="@string/_10_44_45"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line"
+        android:layout_below="@id/linear"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="6.3dp"
+        android:paddingStart="10.7dp"
+        android:paddingEnd="9.3dp"
+        android:paddingBottom="8.3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6dp"
+        android:textSize="14sp"
+        android:textColor="#020202"
+        android:fontFamily="@font/raleway_bold"
+        android:background="@drawable/money_background"
+        android:text="@string/_20_047_50" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/money"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/_203_1_04"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

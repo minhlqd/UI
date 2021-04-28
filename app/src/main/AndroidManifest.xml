@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ActivityRecyclerViewFragment">
-        <activity android:name="com.example.activityrecyclerview.ConfirmChangePasswordActivity"></activity>
-        <activity android:name="com.example.activityrecyclerview.HomeActivity" />
-        <activity android:name="com.example.activityrecyclerview.EmailActivity" />
-        <activity android:name="com.example.activityrecyclerview.SignUpActivity" />
-        <activity android:name="com.example.activityrecyclerview.LoginActivity" />
+        <activity android:name="com.example.activityrecyclerview.uis.ConfirmChangePasswordActivity"></activity>
+        <activity android:name="com.example.activityrecyclerview.uis.HomeActivity" />
+        <activity android:name="com.example.activityrecyclerview.uis.EmailActivity" />
+        <activity android:name="com.example.activityrecyclerview.uis.SignUpActivity" />
+        <activity android:name="com.example.activityrecyclerview.uis.LoginActivity" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".uis.login.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name="com.example.activityrecyclerview.OnBoarding3Activity" />
         <activity android:name="com.example.activityrecyclerview.OnBoarding2Activity" />
-        <activity android:name="com.example.activityrecyclerview.MainActivity">
+        <activity android:name="com.example.activityrecyclerview.uis.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

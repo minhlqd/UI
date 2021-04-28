@@ -1,8 +1,9 @@
-package com.example.activityrecyclerview
+package com.example.activityrecyclerview.uis
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.activityrecyclerview.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
