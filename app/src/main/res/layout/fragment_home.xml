@@ -82,6 +82,22 @@
                 android:text="@string/load_more"/>
         </LinearLayout>
     </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        android:layout_marginBottom="99dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintBottom_toBottomOf="@id/bar_layout"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons_8_alarm"
+            android:background="#101010"
+            android:padding="13dp"/>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

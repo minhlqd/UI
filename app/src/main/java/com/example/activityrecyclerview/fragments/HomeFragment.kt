@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
 
     var data: Int = 2
     var isLoading : Boolean = false
-    val limit : Int = 10
+    private val limit : Int = 10
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
