@@ -54,4 +54,7 @@
     <string name="_17_00_33_real_time">17:00:33 Real time</string>
     <string name="today_change">TODAY CHANGE</string>
     <string name="_2_0634_9_44">+2,0634 (+9,44%)</string>
+    <string name="neo_chart">NEO Chart</string>
+    <string name="buy_or_sell_for_neo">Buy or Sell for NEO</string>
+    <string name="mkt_capitalization">Mkt Capitalization</string>
 </resources>

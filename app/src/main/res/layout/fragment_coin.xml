@@ -38,7 +38,8 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginEnd="10dp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="ContentDescription" />
             <ImageView
                 android:id="@id/back"
                 android:layout_width="20dp"
@@ -47,7 +48,8 @@
                 android:layout_marginTop="55dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@mipmap/ic_back"/>
+                android:src="@mipmap/ic_back"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@id/name"
@@ -85,6 +87,7 @@
                 app:layout_constraintStart_toEndOf="@id/current"/>
 
             <RelativeLayout
+                android:id="@+id/relativeLayout"
                 android:background="@drawable/money_coin_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -94,7 +97,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/current">
-
                 <LinearLayout
                     android:id="@+id/liner_money"
                     android:layout_width="wrap_content"
@@ -119,7 +121,6 @@
                         android:text="@string/_17_00_33_real_time"
                         android:textColor="#ffffff" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -143,7 +144,6 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>
-
                 <TextView
                     android:layout_marginBottom="35dp"
                     android:layout_marginTop="36dp"
@@ -155,6 +155,130 @@
                     android:text="USD"/>
             </RelativeLayout>
 
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_componente_7_4"
+                android:layout_marginTop="130.5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/neo_chart"
+                android:layout_marginTop="146.5dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintStart_toStartOf="@id/background"
+                app:layout_constraintEnd_toEndOf="@id/background"
+                app:layout_constraintTop_toTopOf="@id/background"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/image"
+                android:layout_marginTop="107.5dp"
+                android:layout_marginStart="37dp"
+                app:layout_constraintTop_toTopOf="@id/background"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/image_next"
+                android:layout_marginTop="107.5dp"
+                android:layout_marginEnd="37dp"
+                app:layout_constraintTop_toTopOf="@id/background"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/neo_chart_background"
+                android:fontFamily="@font/raleway_bold"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#222222"
+                android:text="@string/neo_chart"
+                android:layout_marginTop="105.5dp"
+                android:layout_marginStart="138dp"
+                android:layout_marginEnd="137dp"
+                app:layout_constraintTop_toTopOf="@id/background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RelativeLayout
+                android:background="@drawable/chart_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                app:layout_constraintTop_toBottomOf="@+id/chart">
+
+                <TextView
+                    android:id="@+id/buyOrSell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_bold"
+                    android:layout_marginTop="88dp"
+                    android:layout_marginStart="42dp"
+                    android:textColor="#222222"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    tools:ignore="SmallSp"
+                    android:text="@string/buy_or_sell_for_neo" />
+                <ImageView
+                    android:layout_below="@+id/buyOrSell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="7.5dp"
+                    android:paddingStart="10.5dp"
+                    android:paddingTop="7.4dp"
+                    android:paddingEnd="9dp"
+                    android:paddingBottom="6.4dp"
+                    android:src="@drawable/ic_raggruppa_38"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/mkt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="88dp"
+                    android:layout_marginTop="88dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="@string/mkt_capitalization"
+                    android:textColor="#222222"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:layout_below="@+id/mkt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginEnd="38.6dp"
+                    android:paddingStart="32.4dp"
+                    android:paddingTop="14.1dp"
+                    android:paddingEnd="32.1dp"
+                    android:paddingBottom="14.9dp"
+                    android:src="@drawable/ic_raggruppa_60" />
+
+            </RelativeLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </RelativeLayout>
