@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.adaters.IndexAdapter
 import com.example.activityrecyclerview.adaters.NewAdapter
+import com.example.activityrecyclerview.adaters.NewSwipeToDelete
+import com.example.activityrecyclerview.adaters.SwipeToDelete
 import com.example.activityrecyclerview.data.Index
 import com.example.activityrecyclerview.data.New
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -42,12 +45,13 @@ class NewsFragment : Fragment() {
             val item = New(drawable, name)
             new.add(item)
         }
-
         newAdapter= NewAdapter(new)
         recycleView.setHasFixedSize(true)
         layoutManager = LinearLayoutManager(context)
         recycleView.layoutManager = layoutManager
         recycleView.adapter = newAdapter
 
+        val itemTouchHelper = ItemTouchHelper(NewSwipeToDelete(newAdapter))
+        itemTouchHelper.attachToRecyclerView(recycleView)
     }
 }

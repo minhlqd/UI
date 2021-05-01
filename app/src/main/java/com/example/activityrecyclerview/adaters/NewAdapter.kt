@@ -33,4 +33,8 @@ class NewAdapter(var newList: MutableList<New>): RecyclerView.Adapter<NewAdapter
     }
 
     override fun getItemCount(): Int  = newList.size
+    fun deteleItem(pos: Int) {
+        newList.removeAt(pos)
+        notifyItemRemoved(pos)
+    }
 }

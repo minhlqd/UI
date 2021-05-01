@@ -55,7 +55,7 @@ class HomeFragment : Fragment() {
         recycleView.adapter = indexAdapter
         getData()
 
-        var itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
+        val itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
         itemTouchHelper.attachToRecyclerView(recycleView)
 
         recycleView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
