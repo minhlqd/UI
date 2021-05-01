@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/home"
+        android:id="@+id/home"
+        android:icon="@drawable/icons_8_customer"/>
+    <item android:title="@string/coin"
+        android:icon="@drawable/icons_8_chart"
+        android:id="@+id/coin"/>
+    <item android:id="@+id/news"
+        android:title="@string/news"
+        android:icon="@drawable/icons_8_news"/>
+    <item android:id="@+id/customer"
+        android:title="@string/customer"
+        android:icon="@drawable/icons_8_customer"/>
+</menu>

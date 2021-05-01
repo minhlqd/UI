@@ -57,4 +57,8 @@
     <string name="neo_chart">NEO Chart</string>
     <string name="buy_or_sell_for_neo">Buy or Sell for NEO</string>
     <string name="mkt_capitalization">Mkt Capitalization</string>
+    <string name="home">Home</string>
+    <string name="coin">Coin</string>
+    <string name="news">News</string>
+    <string name="customer">Customer</string>
 </resources>

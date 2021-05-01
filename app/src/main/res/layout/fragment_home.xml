@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".uis.HomeActivity">
 
-    <include
-        android:id="@+id/bar_layout"
-        layout="@layout/bar_layout"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,9 +81,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="25dp"
-        android:layout_marginBottom="99dp"
+        android:layout_marginBottom="29dp"
         android:layout_marginEnd="34dp"
-        app:layout_constraintBottom_toBottomOf="@id/bar_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
