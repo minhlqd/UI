@@ -61,4 +61,7 @@
     <string name="coin">Coin</string>
     <string name="news">News</string>
     <string name="customer">Customer</string>
+    <string name="general">General</string>
+    <string name="technical_section">Technical Section</string>
+    <string name="markets">Markets</string>
 </resources>

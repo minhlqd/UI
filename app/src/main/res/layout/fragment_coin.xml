@@ -5,11 +5,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.CoinFragment">
-    <include android:id="@+id/bar_layout"
-        layout="@layout/bar_layout"/>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -205,7 +203,6 @@
                 android:paddingBottom="5dp"
                 android:background="@drawable/neo_chart_background"
                 android:fontFamily="@font/raleway_bold"
-                android:textStyle="normal"
                 android:textSize="14sp"
                 android:textColor="#222222"
                 android:text="@string/neo_chart"
@@ -217,30 +214,32 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <RelativeLayout
-                android:background="@drawable/chart_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="28dp"
+                android:background="@drawable/chart_background"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/chart">
 
                 <TextView
                     android:id="@+id/buyOrSell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/raleway_bold"
-                    android:layout_marginTop="88dp"
                     android:layout_marginStart="42dp"
+                    android:layout_marginTop="88dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="@string/buy_or_sell_for_neo"
                     android:textColor="#222222"
                     android:textSize="10sp"
-                    android:textStyle="normal"
-                    tools:ignore="SmallSp"
-                    android:text="@string/buy_or_sell_for_neo" />
+                    tools:ignore="SmallSp" />
+
                 <ImageView
-                    android:layout_below="@+id/buyOrSell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/buyOrSell"
                     android:layout_marginStart="38dp"
                     android:layout_marginTop="7.5dp"
+                    android:layout_marginBottom="109dp"
                     android:paddingStart="10.5dp"
                     android:paddingTop="7.4dp"
                     android:paddingEnd="9dp"
@@ -253,19 +252,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="88dp"
                     android:layout_marginTop="88dp"
+                    android:layout_marginEnd="88dp"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/mkt_capitalization"
                     android:textColor="#222222"
                     android:textSize="10sp"
-                    android:textStyle="normal"
                     tools:ignore="SmallSp" />
 
                 <ImageView
-                    android:layout_below="@+id/mkt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/mkt"
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="7.5dp"
                     android:layout_marginEnd="38.6dp"
@@ -275,6 +273,39 @@
                     android:paddingBottom="14.9dp"
                     android:src="@drawable/ic_raggruppa_60" />
 
+                <TextView
+                    android:id="@+id/general"
+                    style="@style/TextChartCoin"
+                    android:text="@string/general"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginStart="39dp"/>
+                <TextView
+                    android:id="@+id/tech"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_toEndOf="@+id/general"
+                    style="@style/TextChartCoin"
+                    android:background="@drawable/tech_background"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="#ffffff"
+                    android:text="@string/technical_section"/>
+                <TextView
+                    android:id="@+id/markets"
+                    style="@style/TextChartCoin"
+                    android:text="@string/markets"
+                    android:layout_marginTop="27dp"
+                    android:layout_toEndOf="@+id/tech"
+                    android:layout_marginStart="30dp"/>
+                <TextView
+                    android:id="@+id/charts"
+                    style="@style/TextChartCoin"
+                    android:text="Charts"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_toEndOf="@id/markets"/>
             </RelativeLayout>
 
 
