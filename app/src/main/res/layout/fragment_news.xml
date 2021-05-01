@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.NewsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_componente_6_1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icons_8_menu_vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icons_8_expand_arrow"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/news"
+        style="@style/TextEmail"
+        android:textColor="#121212"
+        android:text="@string/NEWS"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="19dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back"/>
+        app:layout_constraintGuide_percent="0.923"/>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_marginTop="21dp"
+        app:layout_constraintTop_toBottomOf="@id/news"
+        android:background="@drawable/news_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_main"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="81.5dp"
+            android:layout_marginStart="27.2dp"
+            android:layout_marginEnd="23.8dp"
+            android:src="@drawable/main"
+            tools:ignore="ContentDescription" />
 
-</FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/img_main"
+            android:layout_marginTop="21.5dp"
+            android:layout_marginStart="27.2dp"
+            android:layout_marginEnd="23.8dp"/>
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/img_main"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="14.5dp"
+            android:src="@drawable/alert"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/new_item_background">
+
+    <ImageView
+        android:scaleType="fitCenter"
+        android:id="@+id/img_name"
+        android:layout_width="102dp"
+        android:layout_height="104dp"
+        android:src="@drawable/xiaomi"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/img_name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/AltNew"
+            android:text="@string/alt_3_87"/>
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextEmail"
+            android:textColor="#2e2e2e"
+            android:textSize="14sp"
+            android:text="@string/atlanta"/>
+        <TextView
+            style="@style/DescriptionNew"
+            android:text="@string/illum_velit_nam_voluptatum_enim_aut"/>
+        <TextView
+            style="@style/DescriptionNew"
+            android:text="@string/ratione_ratione_officiis_totam"/>
+        <TextView
+            style="@style/DescriptionNew"
+            android:text="@string/mollitia_eum_sint_tempora_ducimus"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="103dp"
+        android:layout_toEndOf="@id/img_name"
+        style="@style/DescriptionNew"
+        android:textColor="#080808"
+        android:text="@string/_3_sept_2020"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/ic_gruppo_di_maschere_1_clipped" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_below="@+id/img_name"
+        android:background="#f8f8f8"/>
+</RelativeLayout>
