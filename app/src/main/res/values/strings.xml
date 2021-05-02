@@ -78,4 +78,6 @@
     <string name="menu">MENU</string>
     <string name="mary_olson">MARY OLSON</string>
     <string name="alerts">Alerts</string>
+    <string name="editorial_news">EDITORIAL NEWS</string>
+    <string name="cryptocurrency">CRYPTOCURRENCY</string>
 </resources>

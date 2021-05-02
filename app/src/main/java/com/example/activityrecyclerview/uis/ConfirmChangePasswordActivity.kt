@@ -12,6 +12,7 @@ class ConfirmChangePasswordActivity : AppCompatActivity() {
         setContentView(R.layout.activity_confirm_change_password)
         login.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
+            intent.putExtra("password", "123")
             startActivity(intent)
         }
     }

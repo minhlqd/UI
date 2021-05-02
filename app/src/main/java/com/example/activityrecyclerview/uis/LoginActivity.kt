@@ -13,26 +13,30 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        var intent: Intent = this.intent
+        val changePassword : String? = intent.getStringExtra("password")
         login.setOnClickListener {
             val txtEmail = email.text.toString()
             val txtPassword = password.text.toString()
             Log.d("aaa", (txtEmail == adminEmail).toString())
             Log.d("aaa", (txtPassword == adminPassword).toString())
-            Log.d("aaa", txtPassword)
-            if (adminEmail == txtEmail && adminPassword == txtPassword) {
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+            if (changePassword != null && adminEmail == txtEmail && changePassword == txtPassword) {
+                val intentHome = Intent(this, HomeActivity::class.java)
+                startActivity(intentHome)
+            } else if (changePassword == null && adminEmail == txtEmail && adminPassword == txtPassword) {
+                val intentHome = Intent(this, HomeActivity::class.java)
+                startActivity(intentHome)
             } else {
                 email.error = "Email or password incorrect"
             }
         }
         signup.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
+            val intentSignUp = Intent(this, SignUpActivity::class.java)
+            startActivity(intentSignUp)
         }
         forgotPassword.setOnClickListener {
-            val intent = Intent(this, EmailActivity::class.java)
-            startActivity(intent)
+            val intentPassword = Intent(this, EmailActivity::class.java)
+            startActivity(intentPassword)
         }
     }
 }
