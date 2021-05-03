@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -74,12 +76,23 @@ class HomeFragment : Fragment() {
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
+
+        val navController : NavController = Navigation.findNavController(view)
+        bottom_navigation.itemIconTintList = null
+        bottom_navigation.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.coin -> navController.navigate(R.id.action_homeFragment_to_coinFragment)
+                R.id.news -> navController.navigate(R.id.action_homeFragment_to_newsFragment)
+                else -> navController.navigate(R.id.action_homeFragment_to_customerFragment)
+            }
+            true
+        }
     }
 
     private fun getData() {
         isLoading = true
         Log.d("aaa", isLoading.toString())
-        loadMore.visibility = View.VISIBLE
+//        loadMore.visibility = View.VISIBLE
         val start: Int = (data - 1) * limit
         val end: Int = data * limit
         for (i in start..end) {
@@ -99,8 +112,11 @@ class HomeFragment : Fragment() {
                 recycleView.adapter = indexAdapter
             }
             isLoading = false
-            loadMore.visibility = View.GONE
+//            loadMore.visibility = View.GONE
         }, 1000)
     }
 
 }
+
+
+

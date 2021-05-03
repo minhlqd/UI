@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.activityrecyclerview.R
+import kotlinx.android.synthetic.main.fragment_coin.*
 
 class CoinFragment : Fragment() {
 
@@ -13,6 +16,20 @@ class CoinFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_coin, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val navController : NavController = Navigation.findNavController(view)
+        bottom_navigation.itemIconTintList = null
+        bottom_navigation.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> navController.navigate(R.id.action_coinFragment_to_homeFragment)
+                R.id.news -> navController.navigate(R.id.action_coinFragment_to_newsFragment)
+                else -> navController.navigate(R.id.action_coinFragment_to_customerFragment)
+            }
+            true
+        }
     }
 
 }

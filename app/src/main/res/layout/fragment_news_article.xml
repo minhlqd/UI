@@ -83,8 +83,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icons_8_calendar"
-            android:layout_below=""/>
+            android:src="@drawable/icons_8_calendar" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -105,4 +104,14 @@
             android:background="@drawable/txt_crpy_background"/>
 
     </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom"
+        android:background="@drawable/bar_background"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="unlabeled"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

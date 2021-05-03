@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:title="@string/home"
         android:id="@+id/home"
-        android:icon="@drawable/icons_8_customer"/>
+        android:icon="@drawable/home_fragment"
+        app:showAsAction="never"/>
     <item android:title="@string/coin"
-        android:icon="@drawable/icons_8_chart"
+        android:icon="@drawable/coin_fragment"
         android:id="@+id/coin"/>
     <item android:id="@+id/news"
         android:title="@string/news"
