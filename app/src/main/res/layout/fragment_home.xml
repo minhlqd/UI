@@ -33,18 +33,54 @@
         app:layout_constraintBottom_toTopOf="@+id/homeBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/homeBackground"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@drawable/home_background"
-        android:paddingStart="20dp"
+    <RelativeLayout
+        android:id="@id/homeBackground"
         android:layout_marginTop="106dp"
-        android:paddingTop="23.6dp"
-        android:layout_marginBottom="23.4dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/index"
-        tools:ignore="RtlSymmetry" />
+        android:background="@drawable/home_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/index"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
+            android:layout_marginStart="19dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="6dp"
+            android:paddingStart="11dp"
+            android:paddingEnd="12dp"
+            style="@style/TxtNew"
+            android:background="@drawable/load_more"
+            android:textColor="#FFFFFF"
+            android:text="@string/index_h"/>
+        <TextView
+            android:id="@+id/share"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="28.6dp"
+            android:layout_toEndOf="@id/index"
+            style="@style/TxtNew"
+            android:text="@string/shares"/>
+        <TextView
+            android:id="@+id/current"
+            android:layout_marginTop="28.6dp"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@id/share"
+            android:text="@string/currencies"
+            style="@style/TxtNew"/>
+        <TextView
+            android:id="@+id/future"
+            android:layout_marginTop="28.6dp"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@id/current"
+            android:text="@string/futures"
+            style="@style/TxtNew"/>
+        <TextView
+            android:layout_marginTop="28.6dp"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@id/future"
+            android:text="@string/crypto"
+            style="@style/TxtNew"/>
+    </RelativeLayout>
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -92,7 +128,7 @@
         app:cardCornerRadius="25dp"
         android:layout_marginBottom="29dp"
         android:layout_marginEnd="34dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
@@ -103,23 +139,4 @@
             android:background="@drawable/alarm_background"
             android:padding="13dp"/>
     </androidx.cardview.widget.CardView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/menu_bottom"
-        android:background="@drawable/bar_background"
-        app:labelVisibilityMode="unlabeled">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-<!--    <ImageView-->
-<!--        android:layout_width="43dp"-->
-<!--        android:layout_height="28dp"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        android:src="@drawable/white"-->
-<!--        tools:layout_editor_absoluteX="45dp"-->
-<!--        tools:layout_editor_absoluteY="784dp" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>

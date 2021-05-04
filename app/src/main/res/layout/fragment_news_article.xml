@@ -81,11 +81,22 @@
             android:src="@drawable/raggruppa_16"
             tools:ignore="ContentDescription" />
         <ImageView
+            android:id="@+id/calendar"
+            android:layout_marginTop="46.5dp"
+            android:layout_below="@id/img_main"
+            android:layout_marginStart="27dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icons_8_calendar" />
-
         <TextView
+            android:layout_below="@id/calendar"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="27dp"
+            style="@style/DescriptionNew"
+            android:textSize="12sp"
+            android:text="@string/_02_set_2020"/>
+        <TextView
+            android:id="@+id/crypto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_regular"
@@ -102,6 +113,47 @@
             android:layout_marginTop="22.5dp"
             tools:ignore="SmallSp"
             android:background="@drawable/txt_crpy_background"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_below="@id/crypto"
+            android:gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginEnd="31dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="#6021ea"
+            android:text="@string/what_is_the_future_of_cryptocurrencies"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="31dp"
+            android:layout_marginEnd="43dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/text1"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/text1"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </ScrollView>
 
     </RelativeLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView

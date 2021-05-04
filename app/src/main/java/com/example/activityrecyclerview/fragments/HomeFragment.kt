@@ -81,17 +81,6 @@ class HomeFragment : Fragment() {
         alarm.setOnClickListener {
             Toast.makeText(context, "alarm", Toast.LENGTH_SHORT).show()
         }
-
-        val navController : NavController = Navigation.findNavController(view)
-        bottom_navigation.itemIconTintList = null
-        bottom_navigation.setOnNavigationItemSelectedListener {
-            when(it.itemId) {
-                R.id.coin -> navController.navigate(R.id.action_homeFragment_to_coinFragment)
-                R.id.news -> navController.navigate(R.id.action_homeFragment_to_newsFragment)
-                else -> navController.navigate(R.id.action_homeFragment_to_customerFragment)
-            }
-            true
-        }
     }
 
     private fun getData() {

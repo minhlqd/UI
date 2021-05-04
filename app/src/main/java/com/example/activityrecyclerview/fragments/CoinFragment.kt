@@ -24,16 +24,6 @@ class CoinFragment : Fragment() {
         alarm.setOnClickListener {
             Toast.makeText(context, "alarm", Toast.LENGTH_SHORT).show()
         }
-        val navController : NavController = Navigation.findNavController(view)
-        bottom_navigation.itemIconTintList = null
-        bottom_navigation.setOnNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.home -> navController.navigate(R.id.action_coinFragment_to_homeFragment)
-                R.id.news -> navController.navigate(R.id.action_coinFragment_to_newsFragment)
-                else -> navController.navigate(R.id.action_coinFragment_to_customerFragment)
-            }
-            true
-        }
     }
 
 }
