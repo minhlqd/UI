@@ -111,6 +111,15 @@
         app:menu="@menu/menu_bottom"
         android:background="@drawable/bar_background"
         app:labelVisibilityMode="unlabeled">
+
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+<!--    <ImageView-->
+<!--        android:layout_width="43dp"-->
+<!--        android:layout_height="28dp"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/white"-->
+<!--        tools:layout_editor_absoluteX="45dp"-->
+<!--        tools:layout_editor_absoluteY="784dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

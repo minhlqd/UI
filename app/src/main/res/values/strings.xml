@@ -81,7 +81,10 @@
     <string name="editorial_news">EDITORIAL NEWS</string>
     <string name="cryptocurrency">CRYPTOCURRENCY</string>
     <string name="predictions">Predictions</string>
-    <string name="predictions">Predictions</string>
     <string name="remove_ads">Remove Ads</string>
     <string name="tools">Tools</string>
+    <string name="select_stocks">Select Stocks</string>
+    <string name="currency_exchange">Currency Exchange</string>
+    <string name="webinar">Webinar</string>
+    <string name="best_broker">Best Broker</string>
 </resources>
