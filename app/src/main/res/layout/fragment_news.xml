@@ -21,7 +21,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
     <ImageView
         android:id="@+id/back"
         android:layout_width="wrap_content"
@@ -108,5 +109,6 @@
             android:src="@drawable/alert"
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="ContentDescription" />
+
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

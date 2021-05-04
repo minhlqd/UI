@@ -130,31 +130,6 @@
             android:background="#6021ea"
             android:text="@string/what_is_the_future_of_cryptocurrencies"/>
 
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title"
-            android:layout_marginStart="31dp"
-            android:layout_marginEnd="43dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/lato_regular"
-                android:text="@string/text1"
-                android:textColor="#000000"
-                android:textSize="13sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="33dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="@string/text1"
-                android:textColor="#000000"
-                android:textSize="13sp" />
-        </ScrollView>
-
     </RelativeLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

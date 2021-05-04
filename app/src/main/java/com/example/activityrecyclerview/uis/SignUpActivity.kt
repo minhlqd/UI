@@ -12,8 +12,10 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
         signup.setOnClickListener {
             val txtEmail = email.text.toString()
-            val txtPassword = email.text.toString()
+            val txtPassword = password.text.toString()
             val intent = Intent(this, LoginActivity::class.java)
+            intent.putExtra("email",txtEmail)
+            intent.putExtra("signUp password",txtPassword)
             startActivity(intent)
         }
         login.setOnClickListener {

@@ -15,17 +15,20 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         var intent: Intent = this.intent
         val changePassword : String? = intent.getStringExtra("password")
+        val signUpEmail : String? = intent.getStringExtra("email")
+        val signUpPassword : String? = intent.getStringExtra("signUp password")
+        this.email.setText(signUpEmail)
+        this.password.setText(signUpPassword)
+        Log.d("aaa", signUpPassword.toString())
         login.setOnClickListener {
             val txtEmail = email.text.toString()
             val txtPassword = password.text.toString()
-            Log.d("aaa", (txtEmail == adminEmail).toString())
-            Log.d("aaa", (txtPassword == adminPassword).toString())
-            if (changePassword != null && adminEmail == txtEmail && changePassword == txtPassword) {
-                val intentHome = Intent(this, HomeActivity::class.java)
-                startActivity(intentHome)
+            if (txtEmail != "" && txtPassword != "" && txtEmail == signUpEmail && txtPassword == signUpPassword) {
+                startActivity(Intent(this, HomeActivity::class.java))
+            } else if (changePassword != null && adminEmail == txtEmail && changePassword == txtPassword) {
+                    startActivity(Intent(this, HomeActivity::class.java))
             } else if (changePassword == null && adminEmail == txtEmail && adminPassword == txtPassword) {
-                val intentHome = Intent(this, HomeActivity::class.java)
-                startActivity(intentHome)
+                startActivity(Intent(this, HomeActivity::class.java))
             } else {
                 email.error = "Email or password incorrect"
             }

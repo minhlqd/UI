@@ -10,6 +10,6 @@ class NewSwipeToDelete(var adapter: NewAdapter) : ItemTouchHelper.SimpleCallback
 
     override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
         val pos = viewHolder.adapterPosition
-        adapter.deteleItem(pos)
+        adapter.deleteItem(pos)
     }
 }

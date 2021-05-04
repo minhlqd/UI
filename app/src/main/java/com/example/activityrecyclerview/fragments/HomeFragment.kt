@@ -18,8 +18,7 @@ import com.example.activityrecyclerview.adaters.IndexAdapter
 import com.example.activityrecyclerview.adaters.SwipeToDelete
 import com.example.activityrecyclerview.data.Index
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_on_boarding2.*
-import kotlin.random.Random
+
 
 class HomeFragment : Fragment() {
 

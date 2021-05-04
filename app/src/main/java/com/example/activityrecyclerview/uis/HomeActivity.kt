@@ -15,6 +15,7 @@ import com.example.activityrecyclerview.fragments.HomeFragment
 import com.example.activityrecyclerview.fragments.NewsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.fragment_coin.*
 
 class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private val home = HomeFragment()
@@ -45,8 +46,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
-        if (supportFragmentManager.backStackEntryCount == 0 ){
+        if (supportFragmentManager.backStackEntryCount == 1 ){
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Đăng xuất")
             builder.setMessage("Bạn có muốn kết thúc phiên đăng nhập này?")
@@ -58,6 +58,8 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 loadFragments(home)
             }
             builder.show()
+        } else {
+            super.onBackPressed()
         }
     }
 }
