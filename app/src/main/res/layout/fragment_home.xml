@@ -96,10 +96,11 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/alarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icons_8_alarm"
-            android:background="#101010"
+            android:background="@drawable/alarm_background"
             android:padding="13dp"/>
     </androidx.cardview.widget.CardView>
     <com.google.android.material.bottomnavigation.BottomNavigationView

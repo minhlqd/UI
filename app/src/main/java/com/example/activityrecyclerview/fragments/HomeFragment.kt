@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -76,6 +77,10 @@ class HomeFragment : Fragment() {
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
+
+        alarm.setOnClickListener {
+            Toast.makeText(context, "alarm", Toast.LENGTH_SHORT).show()
+        }
 
         val navController : NavController = Navigation.findNavController(view)
         bottom_navigation.itemIconTintList = null

@@ -22,10 +22,11 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/menu">
                 <ImageView
+                    android:id="@+id/alarm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/icons_8_alarm"
-                    android:background="#101010"
+                    android:background="@drawable/alarm_background"
                     android:padding="13dp"
                     tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
