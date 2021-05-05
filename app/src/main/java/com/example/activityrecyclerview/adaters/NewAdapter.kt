@@ -4,18 +4,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.activityrecyclerview.NewsItem
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.data.New
+import com.example.activityrecyclerview.fragments.NewsArticleFragment
+import com.example.activityrecyclerview.uis.HomeActivity
 import kotlinx.android.synthetic.main.new_item.view.*
 
-class NewAdapter(var newList: MutableList<New>): RecyclerView.Adapter<NewAdapter.NewViewHolder>() {
+class NewAdapter(var newList: MutableList<New>, var onItemClick: NewsItem, var homeActivity: HomeActivity): RecyclerView.Adapter<NewAdapter.NewViewHolder>() {
 
     class NewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var txtName: TextView = itemView.name
+        var txtName: TextView = itemView.nameItem
         var img: ImageView = itemView.img_name
-
+        var newItem : RelativeLayout = itemView.newItem
         fun binData(new : New) {
             img.setImageResource(new.image)
             txtName.text = new.name
@@ -30,6 +34,10 @@ class NewAdapter(var newList: MutableList<New>): RecyclerView.Adapter<NewAdapter
 
     override fun onBindViewHolder(holder: NewViewHolder, position: Int) {
         holder.binData(newList?.get(position))
+        holder.newItem.setOnClickListener {
+            onItemClick.onItemClick(newList?.get(position).name)
+            homeActivity.supportFragmentManager.beginTransaction().replace(R.id.fragmentMain, NewsArticleFragment()).commit()
+        }
     }
 
     override fun getItemCount(): Int  = newList.size
@@ -37,4 +45,5 @@ class NewAdapter(var newList: MutableList<New>): RecyclerView.Adapter<NewAdapter
         newList.removeAt(pos)
         notifyItemRemoved(pos)
     }
+
 }

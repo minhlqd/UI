@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="25dp">
+    <ImageView
+        android:layout_marginTop="4dp"
+        android:id="@+id/image2"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icons_8_profit"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/name2"
+        android:layout_toEndOf="@id/image2"
+        android:layout_marginStart="14dp"
+        style="@style/TxtCustomer"
+        android:textSize="15sp"
+        android:text="@string/select_stocks"/>
+</RelativeLayout>

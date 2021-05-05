@@ -24,6 +24,9 @@ class CoinFragment : Fragment() {
         alarm.setOnClickListener {
             Toast.makeText(context, "alarm", Toast.LENGTH_SHORT).show()
         }
+        back.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentMain, HomeFragment())?.commit()
+        }
     }
 
 }

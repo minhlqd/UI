@@ -27,7 +27,7 @@
             style="@style/AltNew"
             android:text="@string/alt_3_87"/>
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/nameItem"
             style="@style/TextEmail"
             android:textColor="#2e2e2e"
             android:textSize="14sp"
