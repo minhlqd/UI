@@ -153,7 +153,7 @@
                     android:layout_marginEnd="6dp"
                     android:layout_marginBottom="35dp"
                     android:layout_toEndOf="@+id/liner_money"
-                    android:text="USD"
+                    android:text="@string/usd"
                     android:textColor="#ffffff"
                     android:textSize="12sp" />
             </RelativeLayout>
