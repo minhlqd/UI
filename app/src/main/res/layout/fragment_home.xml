@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         android:src="@drawable/tracciato_869"
         app:layout_constraintTop_toTopOf="parent"/>
     <ImageView

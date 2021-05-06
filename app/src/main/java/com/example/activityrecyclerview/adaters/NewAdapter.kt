@@ -36,7 +36,7 @@ class NewAdapter(var newList: MutableList<New>, var onItemClick: NewsItem, var h
         holder.binData(newList?.get(position))
         holder.newItem.setOnClickListener {
             onItemClick.onItemClick(newList?.get(position).name)
-            homeActivity.supportFragmentManager.beginTransaction().replace(R.id.fragmentMain, NewsArticleFragment()).commit()
+            homeActivity.supportFragmentManager.beginTransaction().replace(R.id.fragmentMain, NewsArticleFragment()).addToBackStack("Fragment").commit()
         }
     }
 
