@@ -10,8 +10,8 @@ import com.example.activityrecyclerview.NewsItem
 import com.example.activityrecyclerview.R
 import kotlinx.android.synthetic.main.fragment_news_article.*
 
-class NewsArticleFragment : Fragment(),NewsItem {
-
+class NewsArticleFragment : Fragment() {
+    var newsFragment: NewsFragment = NewsFragment()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -25,11 +25,5 @@ class NewsArticleFragment : Fragment(),NewsItem {
             activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentMain, NewsFragment())?.commit()
         }
     }
-
-    override fun onItemClick(name: String) {
-        news.text = name
-        Log.d("aaa", name)
-    }
-
 
 }

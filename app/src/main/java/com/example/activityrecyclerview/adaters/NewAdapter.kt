@@ -11,6 +11,7 @@ import com.example.activityrecyclerview.NewsItem
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.data.New
 import com.example.activityrecyclerview.fragments.NewsArticleFragment
+import com.example.activityrecyclerview.fragments.NewsFragment
 import com.example.activityrecyclerview.uis.HomeActivity
 import kotlinx.android.synthetic.main.new_item.view.*
 
