@@ -1,22 +1,20 @@
 package com.example.activityrecyclerview.uis
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.Toast
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.activityrecyclerview.BottomNavigationBehavior
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.fragments.CoinFragment
 import com.example.activityrecyclerview.fragments.CustomerFragment
 import com.example.activityrecyclerview.fragments.HomeFragment
 import com.example.activityrecyclerview.fragments.NewsFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.fragment_coin.*
+
 
 class HomeActivity : AppCompatActivity(){
     private val home = HomeFragment()
@@ -36,7 +34,8 @@ class HomeActivity : AppCompatActivity(){
             }
             true
         }
-
+        val layout : CoordinatorLayout.LayoutParams = bottomNavigation.layoutParams as CoordinatorLayout.LayoutParams
+        layout.behavior = BottomNavigationBehavior()
     }
 
     private fun loadFragments(fragment: Fragment) : Boolean {

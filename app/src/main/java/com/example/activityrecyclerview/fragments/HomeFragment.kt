@@ -20,6 +20,7 @@ import com.example.activityrecyclerview.data.Index
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
+@Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
 
     lateinit var index : MutableList<Index>
@@ -50,15 +51,13 @@ class HomeFragment : Fragment() {
                 in 6..10 -> index.add(index2)
             }
         }
-        indexAdapter = IndexAdapter(index)
+        //indexAdapter = IndexAdapter(index)
         recycleView.setHasFixedSize(true)
         layoutManager = LinearLayoutManager(context)
         recycleView.layoutManager = layoutManager
-        recycleView.adapter = indexAdapter
+        //recycleView.adapter = indexAdapter
         getData()
 
-        val itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
-        itemTouchHelper.attachToRecyclerView(recycleView)
 
         recycleView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -84,8 +83,9 @@ class HomeFragment : Fragment() {
 
     private fun getData() {
         isLoading = true
+//        progressBar.visibility = View.VISIBLE
         Log.d("aaa", isLoading.toString())
-//        loadMore.visibility = View.VISIBLE
+        loadMore.visibility = View.VISIBLE
         val start: Int = (data - 1) * limit
         val end: Int = data * limit
         for (i in start..end) {
@@ -98,18 +98,26 @@ class HomeFragment : Fragment() {
         }
         Handler().postDelayed({
             Log.d("aaa", isLoading.toString())
-            if (::indexAdapter.isInitialized){
+            indexAdapter = IndexAdapter(index)
+            recycleView.adapter = indexAdapter
+            if (::indexAdapter.isInitialized) {
                 indexAdapter.notifyDataSetChanged()
-            } else {
-                indexAdapter = IndexAdapter(index)
-                recycleView.adapter = indexAdapter
             }
+//            if (::indexAdapter.isInitialized){
+//                indexAdapter = IndexAdapter(index)
+//                recycleView.adapter = indexAdapter
+//                indexAdapter.notifyDataSetChanged()
+//            } else {
+//                Log.d("bbb", "View")
+//                indexAdapter = IndexAdapter(index)
+//                recycleView.adapter = indexAdapter
+//            }
+            val itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
+            itemTouchHelper.attachToRecyclerView(recycleView)
             isLoading = false
-//            loadMore.visibility = View.GONE
-        }, 1000)
+//            progressBar.visibility = View.GONE
+            loadMore.visibility = View.GONE
+        }, 3000)
     }
 
 }
-
-
-

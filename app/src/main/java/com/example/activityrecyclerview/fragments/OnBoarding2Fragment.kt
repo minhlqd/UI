@@ -27,7 +27,7 @@ class OnBoarding2Fragment : Fragment() {
             navController.navigate(R.id.tutorial_skip)
         }
         skip.setOnClickListener {
-            navController.navigate(R.id.action_onBoardingFragment_to_loginActivity)
+            navController.navigate(R.id.action_onBoarding2Fragment_to_loginActivity)
         }
         back.setOnClickListener {
             navController.navigate(R.id.action_onBoarding2Fragment_to_onBoardingFragment)
