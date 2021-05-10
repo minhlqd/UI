@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.activityrecyclerview.GetData
 import com.example.activityrecyclerview.NewsItem
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.adaters.NewAdapter
@@ -30,7 +29,6 @@ class NewsFragment : Fragment(),NewsItem {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_news, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

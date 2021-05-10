@@ -4,14 +4,18 @@
     <item android:title="@string/home"
         android:id="@+id/home"
         android:icon="@drawable/home_fragment"
+        app:cnb_backgroundColor = "@drawable/background_bottom"
         app:showAsAction="never"/>
     <item android:title="@string/coin"
-        android:icon="@drawable/coin_fragment"
+        android:icon="@drawable/icons_8_chart"
+        app:backgroundColor = "@drawable/background_bottom"
         android:id="@+id/coin"/>
     <item android:id="@+id/news"
         android:title="@string/news"
+        app:cnb_backgroundColor = "@drawable/background_bottom"
         android:icon="@drawable/icons_8_news"/>
     <item android:id="@+id/customer"
+        app:cnb_backgroundColor = "@drawable/background_bottom"
         android:title="@string/customer"
         android:icon="@drawable/icons_8_customer"/>
 </menu>

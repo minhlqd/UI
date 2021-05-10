@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:drawable="@drawable/icons_8_increase_white"
+        app:background = "@drawable/background_bottom"
         android:state_selected="true"/>
     <item android:drawable="@drawable/icons_8_increase"
         android:state_selected="false" />

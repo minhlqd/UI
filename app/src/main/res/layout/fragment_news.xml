@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.NewsFragment"
     tools:ignore="ExtraText">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -52,6 +53,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/linear"
             android:layout_marginTop="24dp"
             android:layout_marginStart="18dp"
             android:layout_width="match_parent"
@@ -79,36 +81,46 @@
                 android:text="@string/economics"/>
 
         </LinearLayout>
-        <ImageView
-            android:id="@+id/img_main"
-            android:adjustViewBounds="true"
+        <ScrollView
+            android:layout_marginTop="32.8dp"
+            android:layout_below="@+id/linear"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="81.5dp"
-            android:layout_marginStart="27.2dp"
-            android:layout_marginEnd="23.8dp"
-            android:src="@drawable/main"
-            tools:ignore="ContentDescription" />
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_main"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="27.2dp"
+                    android:layout_marginEnd="23.8dp"
+                    android:src="@drawable/main"
+                    tools:ignore="ContentDescription" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycleView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/img_main"
-            android:layout_marginTop="21.5dp"
-            android:layout_marginStart="27.2dp"
-            android:layout_marginEnd="23.8dp"/>
-        <ImageView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_below="@id/img_main"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="14.5dp"
-            android:src="@drawable/alert"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="ContentDescription" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/img_main"
+                    android:layout_marginTop="21.5dp"
+                    android:layout_marginStart="27.2dp"
+                    android:layout_marginEnd="23.8dp"/>
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_below="@id/img_main"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="14.5dp"
+                    android:src="@drawable/alert"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+        </ScrollView>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

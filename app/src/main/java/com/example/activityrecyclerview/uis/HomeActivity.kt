@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.fragments.CoinFragment
@@ -35,6 +36,32 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.home -> {
+                bottom_navigation.itemIconTintList =
+                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
+                bottom_navigation.itemBackground =
+                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
+            }
+            R.id.coin -> {
+                bottom_navigation.itemIconTintList =
+                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
+                bottom_navigation.itemBackground =
+                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
+            }
+            R.id.news -> {
+                bottom_navigation.itemIconTintList =
+                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
+                bottom_navigation.itemBackground =
+                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
+            }
+            R.id.customer -> {
+                bottom_navigation.itemIconTintList =
+                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
+                bottom_navigation.itemBackground =
+                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
+            }
+        }
         var fragment: Fragment? = null
         fragment = when (item.itemId) {
             R.id.home -> home
