@@ -18,7 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.fragment_coin.*
 
-class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class HomeActivity : AppCompatActivity(){
     private val home = HomeFragment()
     private val coin = CoinFragment()
     private val news = NewsFragment()
@@ -27,49 +27,25 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         loadFragments(home)
-        bottom_navigation.setOnNavigationItemSelectedListener(this)
+        bottomNavigation.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> loadFragments(home)
+                R.id.coin -> loadFragments(coin)
+                R.id.news -> loadFragments(news)
+                else -> loadFragments(customer)
+            }
+            true
+        }
+
     }
 
     private fun loadFragments(fragment: Fragment) : Boolean {
+        bottomNavigation.itemIconTintList =
+            ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
+        bottomNavigation.itemBackground =
+            ContextCompat.getDrawable(this, R.drawable.background_bottom)
         supportFragmentManager.beginTransaction().replace(R.id.fragmentMain,fragment).addToBackStack("Fragment").commit()
         return true
-    }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.home -> {
-                bottom_navigation.itemIconTintList =
-                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
-                bottom_navigation.itemBackground =
-                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
-            }
-            R.id.coin -> {
-                bottom_navigation.itemIconTintList =
-                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
-                bottom_navigation.itemBackground =
-                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
-            }
-            R.id.news -> {
-                bottom_navigation.itemIconTintList =
-                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
-                bottom_navigation.itemBackground =
-                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
-            }
-            R.id.customer -> {
-                bottom_navigation.itemIconTintList =
-                    ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
-                bottom_navigation.itemBackground =
-                    ContextCompat.getDrawable(this, R.drawable.background_bottom)
-            }
-        }
-        var fragment: Fragment? = null
-        fragment = when (item.itemId) {
-            R.id.home -> home
-            R.id.coin -> coin
-            R.id.news -> news
-            else -> customer
-        }
-        return loadFragments(fragment)
     }
 
     override fun onBackPressed() {

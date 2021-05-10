@@ -97,6 +97,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="37dp"
+                    android:src="@drawable/icons_8_long_arrow_up"
+                    tools:ignore="ContentDescription" />
+
                 <LinearLayout
                     android:id="@+id/liner_money"
                     android:layout_width="wrap_content"
@@ -110,12 +118,10 @@
                     <TextView
                         style="@style/TextCoin"
                         android:text="@string/rate" />
-
                     <TextView
                         style="@style/TextEmail"
                         android:text="@string/_21_1637"
                         android:textColor="#ffffff" />
-
                     <TextView
                         style="@style/TextCoin"
                         android:fontFamily="@font/raleway_regular"
