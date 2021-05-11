@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.activityrecyclerview.NewsItem
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.adaters.NewAdapter
-import com.example.activityrecyclerview.adaters.NewSwipeToDelete
+import com.example.activityrecyclerview.NewSwipeToDelete
 import com.example.activityrecyclerview.data.New
 import com.example.activityrecyclerview.uis.HomeActivity
 import kotlinx.android.synthetic.main.fragment_home.recycleView
@@ -55,7 +55,7 @@ class NewsFragment : Fragment(),NewsItem {
         val itemTouchHelper = ItemTouchHelper(NewSwipeToDelete(newAdapter))
         itemTouchHelper.attachToRecyclerView(recycleView)
         back.setOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentMain,CoinFragment())?.commit()
+            fragmentManager?.popBackStack()
         }
     }
 

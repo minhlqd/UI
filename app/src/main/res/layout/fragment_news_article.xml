@@ -158,7 +158,14 @@
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
                         android:textSize="13sp"
-                        android:text="@string/text2"/>
+                        android:text="@string/text1"/>
+                    <TextView
+                        android:layout_marginTop="32dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
+                        android:text="@string/text1"/>
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>

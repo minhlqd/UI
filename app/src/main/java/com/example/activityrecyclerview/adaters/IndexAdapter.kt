@@ -9,7 +9,7 @@ import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.data.Index
 import com.example.activityrecyclerview.uis.HomeActivity
 
-class IndexAdapter(var indexList: MutableList<Index>) : RecyclerView.Adapter<IndexAdapter.IndexViewHolder>() {
+class IndexAdapter(private var indexList: MutableList<Index>) : RecyclerView.Adapter<IndexAdapter.IndexViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IndexViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -37,4 +37,12 @@ class IndexAdapter(var indexList: MutableList<Index>) : RecyclerView.Adapter<Ind
     }
 
     override fun getItemCount(): Int = indexList.size
+
+
+    fun onItemMove(adapterPosition: Int, adapterPosition1: Int) {
+        val fromIndex = indexList[adapterPosition]
+        indexList.removeAt(adapterPosition)
+        indexList.add(adapterPosition1, fromIndex)
+        notifyItemMoved(adapterPosition, adapterPosition1)
+    }
 }

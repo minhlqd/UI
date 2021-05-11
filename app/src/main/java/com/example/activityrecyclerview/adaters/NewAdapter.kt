@@ -1,5 +1,6 @@
 package com.example.activityrecyclerview.adaters
 
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,5 +46,10 @@ class NewAdapter(private var newList: MutableList<New>, private var onItemClick:
         newList.removeAt(pos)
         notifyItemRemoved(pos)
     }
+
+//    fun onItemMove(adapterPosition: Int, adapterPosition1: Int) {
+//        val from
+//
+//    }
 
 }

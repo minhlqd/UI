@@ -53,7 +53,7 @@ class CustomerFragment : Fragment() {
         recycleView.adapter = customerAdapter
 
         back.setOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentMain, NewsFragment())?.commit()
+            fragmentManager?.popBackStack()
         }
     }
     private fun getDataCustomer1() {

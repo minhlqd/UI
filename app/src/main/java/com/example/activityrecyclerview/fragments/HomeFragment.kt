@@ -8,16 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.activityrecyclerview.R
 import com.example.activityrecyclerview.adaters.IndexAdapter
-import com.example.activityrecyclerview.adaters.SwipeToDelete
+import com.example.activityrecyclerview.SwipeToDelete
 import com.example.activityrecyclerview.data.Index
 import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.*
 
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
@@ -25,6 +24,8 @@ class HomeFragment : Fragment() {
     lateinit var index : MutableList<Index>
     lateinit var indexAdapter: IndexAdapter
     lateinit var layoutManager: LinearLayoutManager
+    var touchHelper : ItemTouchHelper? = null
+
 
     private val index1: Index = Index("FTS100", "MADRID")
     private val index2: Index = Index("DAX", "XETRA")
@@ -57,7 +58,6 @@ class HomeFragment : Fragment() {
         //recycleView.adapter = indexAdapter
         getData()
 
-
         recycleView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 if (dy>0) {
@@ -74,6 +74,7 @@ class HomeFragment : Fragment() {
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
+
 
         alarm.setOnClickListener {
             Toast.makeText(context, "alarm", Toast.LENGTH_SHORT).show()
@@ -113,6 +114,23 @@ class HomeFragment : Fragment() {
 //            }
             val itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
             itemTouchHelper.attachToRecyclerView(recycleView)
+//            touchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP or ItemTouchHelper.END, 0) {
+//                override fun onMove(
+//                    recyclerView: RecyclerView,
+//                    viewHolder: RecyclerView.ViewHolder,
+//                    target: RecyclerView.ViewHolder
+//                ): Boolean {
+//                    Collections.swap(index,viewHolder.adapterPosition,target.adapterPosition)
+//                    indexAdapter.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
+//                    return true
+//                }
+//
+//                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+//                    TODO("Not yet implemented")
+//                }
+//            })
+//            touchHelper?.attachToRecyclerView(recycleView)
+
             isLoading = false
                 //            progressBar.visibility = View.GONE
             loadMore.visibility = View.GONE
