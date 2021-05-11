@@ -34,17 +34,18 @@ class EmailActivity : AppCompatActivity() {
                 }
                 numberWait == 0 -> {
                     this.runOnUiThread {
-                        wait.text = "Sending!"
+                        //wait.text = "Sending!"
+                        startActivity(Intent(this, ConfirmChangePasswordActivity::class.java))
                     }
                 }
             }
         }
         handler.postDelayed(waitNumber,1000)
         resendEmail.setOnClickListener {
-            if (numberWait == 0) {
+            //if (numberWait == 0) {
                 val intent = Intent(this, ConfirmChangePasswordActivity::class.java)
                 startActivity(intent)
-            }
+            //}
         }
 
     }

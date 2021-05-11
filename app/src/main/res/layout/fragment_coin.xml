@@ -137,7 +137,8 @@
                     android:layout_marginEnd="23dp"
                     android:layout_marginBottom="37dp"
                     android:gravity="end"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="RelativeOverlap">
 
                     <TextView
                         style="@style/TextCoin"
@@ -243,6 +244,7 @@
                     tools:ignore="SmallSp" />
 
                 <ImageView
+                    android:id="@+id/chart1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/buyOrSell"
@@ -260,9 +262,9 @@
                     android:id="@+id/mkt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/buyOrSell"
                     android:layout_marginTop="88dp"
-                    android:layout_marginEnd="88dp"
+                    android:layout_marginStart="110.5dp"
                     android:fontFamily="@font/raleway_regular"
                     android:text="@string/mkt_capitalization"
                     android:textColor="#222222"
@@ -273,9 +275,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/mkt"
-                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/chart1"
                     android:layout_marginTop="7.5dp"
-                    android:layout_marginEnd="38.6dp"
+                    android:layout_marginStart="61.9dp"
                     android:paddingStart="32.4dp"
                     android:paddingTop="14.1dp"
                     android:paddingEnd="32.1dp"

@@ -19,7 +19,6 @@ import com.example.activityrecyclerview.adaters.SwipeToDelete
 import com.example.activityrecyclerview.data.Index
 import kotlinx.android.synthetic.main.fragment_home.*
 
-
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
 
@@ -115,7 +114,7 @@ class HomeFragment : Fragment() {
             val itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
             itemTouchHelper.attachToRecyclerView(recycleView)
             isLoading = false
-//            progressBar.visibility = View.GONE
+                //            progressBar.visibility = View.GONE
             loadMore.visibility = View.GONE
         }, 3000)
     }

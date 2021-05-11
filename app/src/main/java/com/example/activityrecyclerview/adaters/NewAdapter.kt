@@ -15,7 +15,7 @@ import com.example.activityrecyclerview.fragments.NewsFragment
 import com.example.activityrecyclerview.uis.HomeActivity
 import kotlinx.android.synthetic.main.new_item.view.*
 
-class NewAdapter(var newList: MutableList<New>, var onItemClick: NewsItem, var homeActivity: HomeActivity): RecyclerView.Adapter<NewAdapter.NewViewHolder>() {
+class NewAdapter(private var newList: MutableList<New>, private var onItemClick: NewsItem, var homeActivity: HomeActivity): RecyclerView.Adapter<NewAdapter.NewViewHolder>() {
 
     class NewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var txtName: TextView = itemView.nameItem
@@ -25,7 +25,6 @@ class NewAdapter(var newList: MutableList<New>, var onItemClick: NewsItem, var h
             img.setImageResource(new.image)
             txtName.text = new.name
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewViewHolder {

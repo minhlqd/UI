@@ -18,9 +18,8 @@
             android:scaleType="center"
             android:src="@drawable/ic_illustration"
             android:layout_marginTop="59dp"
-            android:layout_marginBottom="567dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            tools:ignore="ContentDescription" />
         <TextView
             style="@style/TextOnBoarding"
             android:textSize="22sp"
@@ -37,14 +36,12 @@
 
         <ImageView
             android:id="@+id/background"
-            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_componente_7_1"
             android:layout_marginTop="130.5dp"
-            android:layout_marginBottom="300.5dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

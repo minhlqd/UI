@@ -2,6 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <corners android:radius="20dp"/>
-    <gradient android:startColor="#370bf0"
+    <gradient android:angle="@integer/config_navAnimTime"
+        android:startColor="#370bf0"
         android:endColor="#f020d8"/>
 </shape>

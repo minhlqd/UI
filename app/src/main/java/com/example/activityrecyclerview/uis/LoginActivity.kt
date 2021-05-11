@@ -21,18 +21,18 @@ class LoginActivity : AppCompatActivity() {
         this.password.setText(signUpPassword)
         Log.d("aaa", signUpPassword.toString())
         login.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
-//            val txtEmail = email.text.toString()
-//            val txtPassword = password.text.toString()
-//            if (txtEmail != "" && txtPassword != "" && txtEmail == signUpEmail && txtPassword == signUpPassword) {
-//                startActivity(Intent(this, HomeActivity::class.java))
-//            } else if (changePassword != null && adminEmail == txtEmail && changePassword == txtPassword) {
-//                    startActivity(Intent(this, HomeActivity::class.java))
-//            } else if (changePassword == null && adminEmail == txtEmail && adminPassword == txtPassword) {
-//                startActivity(Intent(this, HomeActivity::class.java))
-//            } else {
-//                email.error = "Email or password incorrect"
-//            }
+//            startActivity(Intent(this, HomeActivity::class.java))
+            val txtEmail = email.text.toString()
+            val txtPassword = password.text.toString()
+            if (txtEmail != "" && txtPassword != "" && txtEmail == signUpEmail && txtPassword == signUpPassword) {
+                startActivity(Intent(this, HomeActivity::class.java))
+            } else if (changePassword != null && adminEmail == txtEmail && changePassword == txtPassword) {
+                    startActivity(Intent(this, HomeActivity::class.java))
+            } else if (changePassword == null && adminEmail == txtEmail && adminPassword == txtPassword) {
+                startActivity(Intent(this, HomeActivity::class.java))
+            } else {
+                email.error = "Email or password incorrect"
+            }
         }
         signup.setOnClickListener {
             val intentSignUp = Intent(this, SignUpActivity::class.java)

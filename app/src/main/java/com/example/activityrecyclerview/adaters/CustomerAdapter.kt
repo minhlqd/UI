@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.customer_item_2.view.*
 import kotlinx.android.synthetic.main.customer_item_3.view.*
 import kotlinx.android.synthetic.main.customer_item_4.view.*
 
-
 class CustomerAdapter(
     private var customerItem1 : MutableList<Customer>,
     private var customerItem2: MutableList<Customer>,

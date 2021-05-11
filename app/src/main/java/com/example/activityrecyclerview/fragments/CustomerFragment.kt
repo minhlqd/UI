@@ -25,7 +25,6 @@ class CustomerFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_customer, container, false)
     }
 
@@ -34,6 +33,7 @@ class CustomerFragment : Fragment() {
 
         customer1 = mutableListOf()
         getDataCustomer1()
+
         customer2 = mutableListOf()
         getDataCustomer2(customer2)
 
