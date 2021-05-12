@@ -57,11 +57,11 @@ class NewsFragment : Fragment(),NewsItem {
         back.setOnClickListener {
             fragmentManager?.popBackStack()
         }
+
     }
 
     override fun onItemClick(name: String) {
-        nameItem.text = name
-
+//        nameItem.text = name
         Log.d("aaa", name)
     }
 }

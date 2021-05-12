@@ -16,7 +16,6 @@ import com.example.activityrecyclerview.fragments.NewsFragment
 import kotlinx.android.synthetic.main.activity_home.*
 import java.util.*
 
-
 @Suppress("UNREACHABLE_CODE", "NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class HomeActivity : AppCompatActivity(){
     private val home = HomeFragment()
@@ -25,7 +24,7 @@ class HomeActivity : AppCompatActivity(){
     private val customer = CustomerFragment()
 
     private var flag : Boolean = true
-    private var integerDeque : Deque<Int> = ArrayDeque(4)
+    var integerDeque : Deque<Int> = ArrayDeque(4)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)

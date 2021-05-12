@@ -44,13 +44,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         index = mutableListOf()
-
-        for (i in 1..10) {
-            when (i) {
-                in 1..5 -> index.add(index1)
-                in 6..10 -> index.add(index2)
-            }
-        }
+        //data()
         //indexAdapter = IndexAdapter(index)
         recycleView.setHasFixedSize(true)
         layoutManager = LinearLayoutManager(context)
@@ -75,12 +69,23 @@ class HomeFragment : Fragment() {
             }
         })
 
-
         alarm.setOnClickListener {
             Toast.makeText(context, "alarm", Toast.LENGTH_SHORT).show()
         }
     }
 
+    private fun data() {
+        for (i in 1..10) {
+            when (i%4) {
+                0 -> index.add(index1)
+                1 -> index.add(index2)
+                2 -> index.add(index3)
+                3 -> index.add(index4)
+            }
+        }
+        indexAdapter = IndexAdapter(index)
+        recycleView.adapter = indexAdapter
+    }
     private fun getData() {
         isLoading = true
 //        progressBar.visibility = View.VISIBLE
@@ -103,33 +108,10 @@ class HomeFragment : Fragment() {
             if (::indexAdapter.isInitialized) {
                 indexAdapter.notifyDataSetChanged()
             }
-//            if (::indexAdapter.isInitialized){
-//                indexAdapter = IndexAdapter(index)
-//                recycleView.adapter = indexAdapter
-//                indexAdapter.notifyDataSetChanged()
-//            } else {
-//                Log.d("bbb", "View")
-//                indexAdapter = IndexAdapter(index)
-//                recycleView.adapter = indexAdapter
-//            }
+
             val itemTouchHelper = ItemTouchHelper(SwipeToDelete(indexAdapter))
             itemTouchHelper.attachToRecyclerView(recycleView)
-//            touchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP or ItemTouchHelper.END, 0) {
-//                override fun onMove(
-//                    recyclerView: RecyclerView,
-//                    viewHolder: RecyclerView.ViewHolder,
-//                    target: RecyclerView.ViewHolder
-//                ): Boolean {
-//                    Collections.swap(index,viewHolder.adapterPosition,target.adapterPosition)
-//                    indexAdapter.notifyItemMoved(viewHolder.adapterPosition, target.adapterPosition)
-//                    return true
-//                }
-//
-//                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-//                    TODO("Not yet implemented")
-//                }
-//            })
-//            touchHelper?.attachToRecyclerView(recycleView)
+
 
             isLoading = false
                 //            progressBar.visibility = View.GONE

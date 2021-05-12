@@ -1,5 +1,6 @@
 package com.example.activityrecyclerview.adaters
 
+import android.os.Bundle
 import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
@@ -37,7 +38,11 @@ class NewAdapter(private var newList: MutableList<New>, private var onItemClick:
         holder.binData(newList?.get(position))
         holder.newItem.setOnClickListener {
             onItemClick.onItemClick(newList?.get(position).name)
-            homeActivity.supportFragmentManager.beginTransaction().replace(R.id.fragmentMain, NewsArticleFragment()).addToBackStack("Fragment").commit()
+            val bundle : Bundle = Bundle()
+            bundle.putString("name", newList?.get(position).name)
+            val fragment: NewsArticleFragment = NewsArticleFragment()
+            fragment.arguments = bundle
+            homeActivity.supportFragmentManager.beginTransaction().replace(R.id.fragmentMain, fragment).addToBackStack("Fragment").commit()
         }
     }
 
