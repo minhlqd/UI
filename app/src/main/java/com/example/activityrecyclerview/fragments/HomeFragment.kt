@@ -24,8 +24,7 @@ class HomeFragment : Fragment() {
     lateinit var index : MutableList<Index>
     lateinit var indexAdapter: IndexAdapter
     lateinit var layoutManager: LinearLayoutManager
-    var touchHelper : ItemTouchHelper? = null
-
+//    var touchHelper : ItemTouchHelper? = null
 
     private val index1: Index = Index("FTS100", "MADRID")
     private val index2: Index = Index("DAX", "XETRA")
@@ -89,7 +88,6 @@ class HomeFragment : Fragment() {
     private fun getData() {
         isLoading = true
 //        progressBar.visibility = View.VISIBLE
-        Log.d("aaa", isLoading.toString())
         loadMore.visibility = View.VISIBLE
         val start: Int = (data - 1) * limit
         val end: Int = data * limit
@@ -116,7 +114,7 @@ class HomeFragment : Fragment() {
             isLoading = false
                 //            progressBar.visibility = View.GONE
             loadMore.visibility = View.GONE
-        }, 3000)
+        }, 1000)
     }
 
 }

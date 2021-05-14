@@ -60,7 +60,6 @@ class CustomerAdapter(
                 }
                 is TypeFourViewHolder -> {
                     p0.bind(customerItem4[p1 - 9])
-                    Log.d("aaa",p1.toString())
                 }
                 is TypeFiveViewHolder -> {
                     p0.bind(customerItem5[p1 - 10])

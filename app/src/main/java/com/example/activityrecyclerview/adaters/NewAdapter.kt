@@ -17,7 +17,7 @@ import com.example.activityrecyclerview.fragments.NewsFragment
 import com.example.activityrecyclerview.uis.HomeActivity
 import kotlinx.android.synthetic.main.new_item.view.*
 
-class NewAdapter(private var newList: MutableList<New>, private var onItemClick: NewsItem, var homeActivity: HomeActivity): RecyclerView.Adapter<NewAdapter.NewViewHolder>() {
+class NewAdapter(private var newList: MutableList<New>, private var homeActivity: HomeActivity): RecyclerView.Adapter<NewAdapter.NewViewHolder>() {
 
     class NewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var txtName: TextView = itemView.nameItem
@@ -35,12 +35,11 @@ class NewAdapter(private var newList: MutableList<New>, private var onItemClick:
     }
 
     override fun onBindViewHolder(holder: NewViewHolder, position: Int) {
-        holder.binData(newList?.get(position))
+        holder.binData(newList[position])
         holder.newItem.setOnClickListener {
-            onItemClick.onItemClick(newList?.get(position).name)
             val bundle : Bundle = Bundle()
-            bundle.putString("name", newList?.get(position).name)
-            val fragment: NewsArticleFragment = NewsArticleFragment()
+            bundle.putString("name", newList[position].name)
+            val fragment = NewsArticleFragment()
             fragment.arguments = bundle
             homeActivity.supportFragmentManager.beginTransaction().replace(R.id.fragmentMain, fragment).addToBackStack("Fragment").commit()
         }

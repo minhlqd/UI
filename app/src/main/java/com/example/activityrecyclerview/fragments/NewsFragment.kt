@@ -18,11 +18,11 @@ import kotlinx.android.synthetic.main.fragment_home.recycleView
 import kotlinx.android.synthetic.main.fragment_news.*
 import kotlinx.android.synthetic.main.new_item.*
 
-class NewsFragment : Fragment(),NewsItem {
+class NewsFragment : Fragment() {
+
     private lateinit var new : MutableList<New>
     private lateinit var newAdapter: NewAdapter
     private lateinit var layoutManager: LinearLayoutManager
-    private lateinit var text: String
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -46,7 +46,7 @@ class NewsFragment : Fragment(),NewsItem {
             val item = New(drawable, name)
             new.add(item)
         }
-        newAdapter= NewAdapter(new,this, context as HomeActivity)
+        newAdapter= NewAdapter(new, context as HomeActivity)
         recycleView.setHasFixedSize(true)
         layoutManager = LinearLayoutManager(context)
         recycleView.layoutManager = layoutManager
@@ -58,10 +58,5 @@ class NewsFragment : Fragment(),NewsItem {
             fragmentManager?.popBackStack()
         }
 
-    }
-
-    override fun onItemClick(name: String) {
-//        nameItem.text = name
-        Log.d("aaa", name)
     }
 }

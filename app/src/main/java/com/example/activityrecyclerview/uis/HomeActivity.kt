@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -23,8 +24,9 @@ class HomeActivity : AppCompatActivity(){
     private val news = NewsFragment()
     private val customer = CustomerFragment()
 
+    private var count = 1
     private var flag : Boolean = true
-    var integerDeque : Deque<Int> = ArrayDeque(4)
+    private var integerDeque : Deque<Int> = ArrayDeque()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -41,12 +43,14 @@ class HomeActivity : AppCompatActivity(){
                         if (flag) {
                             integerDeque.addFirst(R.id.home)
                             flag = false
+                            Log.d("fragment", flag.toString())
                         }
                     }
                 }
                 integerDeque.remove(id)
             }
             integerDeque.push(id)
+            Log.d("fragment", integerDeque.toString())
             loadFragments(getFragment(it.itemId))
             true
         }
@@ -84,6 +88,8 @@ class HomeActivity : AppCompatActivity(){
             ContextCompat.getColorStateList(this, R.color.bottom_navigation_color)
         bottomNavigation.itemBackground =
             ContextCompat.getDrawable(this, R.drawable.background_bottom)
+        Log.d("fragment", count.toString())
+        count++
         supportFragmentManager.beginTransaction().replace(R.id.fragmentMain,fragment).addToBackStack("Fragment").commit()
         //return true
     }
@@ -91,6 +97,7 @@ class HomeActivity : AppCompatActivity(){
     override fun onBackPressed() {
         integerDeque.pop()
         if (!integerDeque.isEmpty()) {
+            Log.d("fragment", integerDeque.toString())
             loadFragments(getFragment(integerDeque.peek()))
         } else {
             val builder = AlertDialog.Builder(this)
@@ -101,7 +108,9 @@ class HomeActivity : AppCompatActivity(){
                 startActivity(intent)
             }
             builder.setNegativeButton("No"){ _, _ ->
-                loadFragments(home)
+                integerDeque.addFirst(R.id.home)
+                loadFragments(getFragment(R.id.home))
+                //flag = true
             }
             builder.show()
         }
